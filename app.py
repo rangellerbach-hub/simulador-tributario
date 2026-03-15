@@ -33,7 +33,7 @@ if st.button("🚀 Calcular"):
             
             # Tentando o modelo 1.5-flash com nomenclatura padrão
             model = genai.GenerativeModel(
-                model_name='gemini-1.5-flash',
+                model_name='gemini-flash-lite-latest',
                 system_instruction=SYSTEM_PROMPT
             )
             
@@ -45,7 +45,7 @@ if st.button("🚀 Calcular"):
             # Se o 1.5-flash falhar, tentamos o 1.5-pro como backup automático
             try:
                 model_backup = genai.GenerativeModel(
-                    model_name='gemini-1.5-pro',
+                    model_name='gemini-flash-latest',
                     system_instruction=SYSTEM_PROMPT
                 )
                 response = model_backup.generate_content(f"Faturamento: {faturamento}, Atividade: {atividade}")
