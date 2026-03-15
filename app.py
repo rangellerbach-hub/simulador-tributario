@@ -69,8 +69,8 @@ if st.button("🚀 Calcular Melhor Opção"):
     else:
         try:
             genai.configure(api_key=api_key)
-            model = genai.GenerativeModel('gemini-1.5-flash', system_instruction=SYSTEM_PROMPT)
-            
+            model = genai.GenerativeModel('gemini-1.5-flash-latest', system_instruction=SYSTEM_PROMPT)
+                     
             prompt = f"Faturamento Mensal: R$ {faturamento}, Atividade: {atividade}, ISS informado: {iss_input}%"
             
             with st.spinner("Analisando as regras fiscais..."):
