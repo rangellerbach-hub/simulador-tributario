@@ -33,7 +33,7 @@ if st.button("🚀 Calcular"):
             
             # Tentando o modelo 1.5-flash com nomenclatura padrão
             model = genai.GenerativeModel(
-                model_name='gemini-flash-lite-latest',
+                model_name='gemini-3-flash-preview',
                 system_instruction=SYSTEM_PROMPT
             )
             
